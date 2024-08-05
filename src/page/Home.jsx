@@ -3,6 +3,7 @@ import HomeFooter from '../component/HomeFooter';
 import MidHome from '../component/MidHome';
 import { FaCaretUp, FaCaretDown } from "react-icons/fa";
 import { CiShoppingBasket, CiWallet, CiMoneyCheck1, CiCreditCard1 } from 'react-icons/ci';
+import DoughnutChart from '../component/Doughnut';
 
 const data = [
   {
@@ -46,11 +47,10 @@ const Home = () => {
       <div className='mt-4'>
         <div className='flex flex-wrap justify-between'>
 
-
-          <div className='flex justify-between gap-4 w-[55%] md:w-[55%]'>
+          <div className='flex flex-wrap justify-between gap-4 w-full md:w-[55%]'>
             {data.map((card, index) => (
-              <div className='bg-[#1F2029] w-[150px] h-[150px] flex flex-col p-4 aspect-square'>
-                <div className={`flex justify-items-center items-center ${card.bgColor}  ${card.textColor} w-[40px] h-[40px] rounded-md px-2`}>
+              <div key={index} className='bg-[#1F2029] w-full md:w-[48%] lg:w-[23%] h-[150px] flex flex-col p-4 aspect-square'>
+                <div className={`flex justify-center items-center ${card.bgColor} ${card.textColor} w-[40px] h-[40px] rounded-md px-2`}>
                   {card.icon}
                 </div>
                 <div className='my-2 text-white text-sm font-bold'>{card.title}</div>
@@ -64,10 +64,8 @@ const Home = () => {
             ))}
           </div>
 
-
-
-          <div className='bg-[#1F2029] py-6 px-4 w-[40%] md:py-4 md:px-[40px] md:w-[42%] mt-4 md:mt-0'>
-            <div className='flex justify-between gap-8'>
+          <div className='bg-[#1F2029] py-6 px-4 w-full md:w-[42%] mt-4 md:mt-0'>
+            <div className='flex flex-col md:flex-row justify-between gap-8'>
               <div className='text-3xl font-bold text-white'>
                 <div className='text-sm font-light mb-4'>Net Profit</div>
                 <div className='text-3xl font-bold'>$6727.34</div>
@@ -77,7 +75,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className='text-sm bg-slate-500 px-3 py-2 rounded-full'>Weekly</div>
+              <div className='text-sm px-3 py-[-1px] rounded-full'>
+                <DoughnutChart />
+                <p className='text-white text-[10px]'>* The values that have been rounded off</p>
+              </div>
             </div>
           </div>
         </div>
@@ -86,7 +87,6 @@ const Home = () => {
 
         <HomeFooter />
       </div>
-
     </>
   )
 };

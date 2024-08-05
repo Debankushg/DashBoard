@@ -7,14 +7,17 @@ import Profile from '../page/Profile';
 
 const MainContent = () => {
   return (
-    <div className="flex-1 p-6 bg-[#141316] text-white">
+    <main className="flex-1 bg-gray-700 text-white p-6 overflow-y-auto">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        {/* <Route path="/settings" element={<Settings />} />
-        <Route path="/logout" element={<Logout />} /> */}
+        <Route path="/" element={<h2 className="text-xl font-bold mb-4"><Home /></h2>} />
+        <Route path="/profile" element={<h2 className="text-xl font-bold mb-4"><Profile /></h2>} />
+        <Route path="/settings" element={<h2 className="text-xl font-bold mb-4">Settings</h2>} />
+        <Route path="/clipboard" element={<h2 className="text-xl font-bold mb-4">Clipboard</h2>} />
+        <Route path="/cart" element={<h2 className="text-xl font-bold mb-4">Cart</h2>} />
       </Routes>
-    </div>
+      {/* Add more content to test scrolling */}
+      <div style={{ height: '1500px' }}></div>
+    </main>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { MdHome } from "react-icons/md";
 import { BsFileBarGraph } from "react-icons/bs";
 import { LuClipboardCheck } from "react-icons/lu";
@@ -7,62 +7,57 @@ import { CiWallet } from "react-icons/ci";
 import { BsClipboardCheck } from "react-icons/bs";
 import { FaDiceFour } from "react-icons/fa";
 
-const Sidebar = () => {
+const Sidebar = ({toggleSidebar}) => {
   return (
-    <div className="h-full w-14 bg-[#1F2029] text-white flex flex-col">
-      <h2 className="text-2xl font-semibold text-center mt-4 px-4">
-        <FaDiceFour size={20} />
-      </h2>
-      <ul className="mt-10 px-4">
+    <div className="h-screen sm-h-[297%] w-64 md:w-14 bg-[#1F2029] text-white flex flex-col">
+      <div className="text-center mt-4">
+        <FaDiceFour size={24} className="mx-auto" />
+      </div>
+      <ul className="mt-10 flex flex-col items-center">
         <NavLink 
           to="/" 
           className={({ isActive }) => 
-            `relative px-4 py-2 hover:bg-gray-700 flex justify-center items-center ${isActive ? 'text-blue-500 ' : 'text-white'}`
+            `relative px-4 py-2 hover:bg-gray-700 flex justify-center items-center ${isActive ? 'text-blue-500' : 'text-white'}`
           }
+          onClick={toggleSidebar}
         >
-          <li className="relative flex items-center justify-center">
-            <MdHome size={20} className={({ isActive }) => isActive ? 'text-blue-500' : 'text-white'} />
-          </li>
+          <MdHome size={24} />
         </NavLink>
         <NavLink 
           to="/profile" 
           className={({ isActive }) => 
             `relative px-4 py-2 hover:bg-gray-700 flex justify-center items-center ${isActive ? 'text-blue-500' : 'text-white'}`
           }
+          onClick={toggleSidebar}
         >
-          <li className="relative flex items-center justify-center">
-            <BsFileBarGraph size={20} className={({ isActive }) => isActive ? 'text-blue-500' : 'text-white'} />
-          </li>
+          <BsFileBarGraph size={24} />
         </NavLink>
         <NavLink 
           to="/settings" 
           className={({ isActive }) => 
             `relative px-4 py-2 hover:bg-gray-700 flex justify-center items-center ${isActive ? 'text-blue-500' : 'text-white'}`
           }
+          onClick={toggleSidebar}
         >
-          <li className="relative flex items-center justify-center">
-            <LuClipboardCheck size={20} className={({ isActive }) => isActive ? 'text-blue-500' : 'text-white'} />
-          </li>
+          <LuClipboardCheck size={24} />
         </NavLink>
         <NavLink 
           to="/clipboard" 
           className={({ isActive }) => 
             `relative px-4 py-2 hover:bg-gray-700 flex justify-center items-center ${isActive ? 'text-blue-500' : 'text-white'}`
           }
+          onClick={toggleSidebar}
         >
-          <li className="relative flex items-center justify-center">
-            <CiWallet size={20} className={({ isActive }) => isActive ? 'text-blue-500' : 'text-white'} />
-          </li>
+          <CiWallet size={24} />
         </NavLink>
         <NavLink 
           to="/cart" 
           className={({ isActive }) => 
             `relative px-4 py-2 hover:bg-gray-700 flex justify-center items-center ${isActive ? 'text-blue-500' : 'text-white'}`
           }
+          onClick={toggleSidebar}
         >
-          <li className="relative flex items-center justify-center">
-            <BsClipboardCheck size={20} className={({ isActive }) => isActive ? 'text-blue-500' : 'text-white'} />
-          </li>
+          <BsClipboardCheck size={24} />
         </NavLink>
       </ul>
     </div>

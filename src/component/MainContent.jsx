@@ -16,7 +16,7 @@ const MainContent = () => {
         <Route path="/cart" element={<h2 className="text-xl font-bold mb-4">Cart</h2>} />
       </Routes>
       {/* Add more content to test scrolling */}
-      <div style={{ height: '1500px' }}></div>
+      {/* <div style={{ height: '0px' }}></div> */}
     </main>
   );
 };

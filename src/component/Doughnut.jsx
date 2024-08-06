@@ -27,7 +27,7 @@ const DoughnutChart = () => {
 
   const options = {
     responsive: true,
-    cutout: '80%', // Adjust the inner radius of the Doughnut
+    cutout: '90%', // Adjust the inner radius of the Doughnut
     plugins: {
       legend: {
         display: false, // Hide the legend
@@ -59,13 +59,18 @@ const DoughnutChart = () => {
   };
 
   return (
-    <div style={{ width: '150px', height: '150px', padding: '20px', borderRadius: '15px' }}>
-    <div className='flex flex-col items-center relative top-10'>
-      <h1 className='text-3xl font-bold absolute top-[-10px] right-[16px] '>70%</h1>
-      <h3 className='text-[10px] absolute top-5 px-4  text-center leading-3'>Goal Completion</h3>
-    </div>
+    <div className='flex flex-col items-center'>
+    <div className='w-36 h-36 p-5 rounded-lg md:p-4 md:flex md:flex-col'>
+      <div className='flex flex-col items-center relative'>
+        <h1 className='text-3xl font-bold absolute top-[20px] right-[16px]'>70%</h1>
+        <h3 className='text-xs absolute top-[55px] px-4 text-center leading-3'>Goal Completion</h3>
+      </div>
       <Doughnut data={data} options={options} />
     </div>
+    <div className='text-white text-xs leading-3 px-4 mt-2 text-center'>
+      * The values that have been rounded off
+    </div>
+  </div>
   );
 };
 

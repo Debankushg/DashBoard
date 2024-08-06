@@ -109,14 +109,14 @@ const HomeFooter = () => {
                         <div className='flex-1 text-center font-semibold'>Amount</div>
                         <div className='flex-1 text-center font-semibold'>Status</div>
                     </div>
-                    <div className='mt-4 max-h-80 overflow-y-auto'>
+                    <div className='mt-4 max-h-80 overflow-y-auto px-4'>
                         {orders.map(order => (
                             <div key={order.id} className='flex border-b border-solid border-gray-100 py-2 items-center'>
                                 <img src={order.customerPic} alt='customerPic' className='w-12 h-12 rounded-full mr-2' />
-                                <div className='flex-1 text-left'>{order.customerName}</div>
-                                <div className='flex-1 text-center'>{order.orderNo}</div>
-                                <div className='flex-1 text-center'>{order.amount}</div>
-                                <div className={`flex-1 text-center rounded-full py-1 ${order.statusColor}`}>{order.status}</div>
+                                <div className='flex-1 text-left font-light text-sm'>{order.customerName}</div>
+                                <div className='flex-1 text-center font-light text-sm'>{order.orderNo}</div>
+                                <div className='flex-1 text-center font-light text-sm'>{order.amount}</div>
+                                <div className={`flex-1 text-center rounded-full py-1 font-light text-sm ${order.statusColor}`}>{order.status}</div>
                             </div>
                         ))}
                     </div>
@@ -131,7 +131,7 @@ const HomeFooter = () => {
             <div className='bg-[#1F2029] w-full md:w-[42%] h-auto md:h-full p-6'>
                 <div>
                     <h1 className='text-3xl font-bold'>Customer's Feedback</h1>
-                    <div className='mt-4 flex flex-col  max-h-[400px] overflow-y-auto'>
+                    <div className='mt-4 flex flex-col  max-h-[400px] px-4 overflow-y-auto'>
                         {customerDetails.map(order => (
                             <div key={order.id} className='flex flex-col border-b border-solid border-gray-100 py-4'>
                                 <div className='flex items-center mb-2'>
@@ -142,7 +142,7 @@ const HomeFooter = () => {
                                     <div className='flex-1 text-left'><Rating value={order.rating} /></div>
                                 </div>
                                 <div className='flex items-center'>
-                                    <div className='flex-1 text-left text-white'>{order.description}</div>
+                                    <div className='flex-1 text-left font-light text-sm text-white'>{order.description}</div>
                                 </div>
                             </div>
                         ))}

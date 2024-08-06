@@ -14,6 +14,11 @@ const MidHome = () => {
         </div>
         <BarChart />
       </div>
+
+
+
+
+      
       <div className='bg-[#1F2029] py-4 px-6 md:py-14 md:pt-[20px] w-full md:w-[42%] mt-4 md:mt-0'>
         <div className='flex flex-col gap-6'>
           <div className='flex justify-between items-center'>

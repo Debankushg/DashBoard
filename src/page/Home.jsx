@@ -50,7 +50,7 @@ const Home = () => {
           <div className='flex flex-wrap justify-between gap-4 w-full md:w-[55%]'>
             {data.map((card, index) => (
               <div key={index} className='bg-[#1F2029] w-full md:w-[48%] lg:w-[23%] h-[150px] flex flex-col p-4 aspect-square'>
-                <div className={`flex justify-center items-center ${card.bgColor} ${card.textColor} w-[40px] h-[40px] rounded-md px-2`}>
+                <div className={`flex justify-center items-center ${card.bgColor} ${card.textColor} w-[40px] h-[100px] rounded-md px-2`}>
                   {card.icon}
                 </div>
                 <div className='my-2 text-white text-sm font-bold'>{card.title}</div>
@@ -63,21 +63,19 @@ const Home = () => {
               </div>
             ))}
           </div>
-
-          <div className='bg-[#1F2029] py-6 px-4 w-full md:w-[42%] mt-4 md:mt-0'>
-            <div className='flex flex-col md:flex-row justify-between gap-8'>
+          <div className='bg-[#1F2029] p-4 w-full md:w-[42%] mt-4 md:mt-0'>
+            <div className='flex flex-col md:flex-row justify-between items-center md:items-start px-4 gap-8'>
               <div className='text-3xl font-bold text-white'>
                 <div className='text-sm font-light mb-4'>Net Profit</div>
                 <div className='text-3xl font-bold'>$6727.34</div>
                 <div>
-                  <div className={`text-sm flex mt-2 text-green-500`}>
+                  <div className='text-sm flex mt-2 text-green-500'>
                     <span className='mt-1'><FaCaretDown /></span>  5%
                   </div>
                 </div>
               </div>
-              <div className='text-sm px-4 rounded-full'>
+              <div className='text-sm w-full md:w-auto px-4 rounded-full'>
                 <DoughnutChart />
-                <p className='text-white text-[10px]'>* The values that have been rounded off</p>
               </div>
             </div>
           </div>

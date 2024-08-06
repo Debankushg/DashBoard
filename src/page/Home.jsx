@@ -75,7 +75,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className='text-sm px-3 py-[-1px] rounded-full'>
+              <div className='text-sm px-4 rounded-full'>
                 <DoughnutChart />
                 <p className='text-white text-[10px]'>* The values that have been rounded off</p>
               </div>

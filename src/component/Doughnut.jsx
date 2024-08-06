@@ -61,8 +61,8 @@ const DoughnutChart = () => {
   return (
     <div style={{ width: '150px', height: '150px', padding: '20px', borderRadius: '15px' }}>
     <div className='flex flex-col items-center relative top-10'>
-      <h1 className='text-3xl font-bold absolute top-[-10px] right-[15px] '>70%</h1>
-      <h3 className='text-[10px] absolute top-5'>Goal Completion</h3>
+      <h1 className='text-3xl font-bold absolute top-[-10px] right-[16px] '>70%</h1>
+      <h3 className='text-[10px] absolute top-5 px-4  text-center leading-3'>Goal Completion</h3>
     </div>
       <Doughnut data={data} options={options} />
     </div>
